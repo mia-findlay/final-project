@@ -1,0 +1,123 @@
+/* ---------- Page ---------- */
+
+body {
+  /* Colors from the Figma design */
+  --yellow: #f6f5c4;
+  --green: #4cab50;
+  --gray: #6e6e6e;
+  --light-green: #aed1a4;
+  --dark-green: #0d3b0f;
+
+  /* The page stays phone width and sits in the middle of wider screens */
+  width: 393px;
+  min-height: 854px;
+  margin: 0 auto;
+  padding: 0;
+
+  /* Stack header, main, and footer from top to bottom */
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--yellow);
+  font-family: "DynaPuff", sans-serif;
+}
+
+/* ---------- Menu button ---------- */
+
+.menu-button {
+  width: 75px;
+  height: 76px;
+  padding: 20px 0 0 16px;
+  border: none;
+  border-radius: 0 0 25px 0;
+  background-color: var(--light-green);
+
+  /* Stack the three lines with space between them */
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  cursor: pointer;
+}
+
+.menu-line {
+  width: 45px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--dark-green);
+}
+
+/* ---------- Text ---------- */
+
+.title {
+  margin: 10px 0 0 0;
+  padding: 0 30px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  color: var(--green);
+}
+
+.subtitle {
+  width: 310px;
+  margin: 17px auto 0 auto;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: var(--gray);
+}
+
+/* ---------- Characters ---------- */
+
+.characters {
+  margin-top: 25px;
+  padding: 0 22px;
+
+  /* Put the pancake and onion side by side */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pancake {
+  width: 166px;
+  animation: rock 2s ease-in-out infinite alternate;
+}
+
+.onion {
+  width: 164px;
+  margin-top: 7px;
+  animation: rock 2s ease-in-out infinite alternate;
+}
+
+/* Rock back and forth: tilt left, tilt right, then back to straight */
+@keyframes rock {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  /* Push the footer to the bottom of the page */
+  margin-top: auto;
+  padding: 0 23px 16px 0;
+  text-align: right;
+}
+
+.credit {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--green);
+}
